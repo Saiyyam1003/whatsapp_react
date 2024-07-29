@@ -7,7 +7,9 @@ import axios from 'axios';
 function Navbar() {
     const [user, setUser] = useState(null);
     const { setUserEmail } = useUser();
-
+    useEffect(() => {
+        
+    
     // Function to fetch user info from the server
     const fetchUserInfo = async () => {
         try {
@@ -26,16 +28,20 @@ function Navbar() {
             setUserEmail(email);
 
             // Initialize WhatsApp client after fetching user info
-            const token = 'your_access_token_here'; // Replace with actual token retrieval logic
-            initializeWhatsAppClient(email, token);
+             // Replace with actual token retrieval logic
+            initializeWhatsAppClient(email);
 
         } catch (error) {
             console.error('Error fetching user info:', error);
         }
     };
 
-    const initializeWhatsAppClient = (email, token) => {
-        axios.post('http://localhost:3000/initialize', { email, token })
+
+    fetchUserInfo();
+}, [setUserEmail]);
+
+    const initializeWhatsAppClient = (email) => {
+        axios.post('http://localhost:3000/initialize', { email })
             .then(response => {
                 console.log(response.data);
                 if (response.data.success) {
@@ -76,18 +82,16 @@ function Navbar() {
     };
 
     // Fetch user info on component mount if already logged in
-    useEffect(() => {
-        fetchUserInfo();
-    }, []);
+    
 
     return (
         <nav className="navbar">
             <h1>WhatsApp-Archiver</h1>
-            <div>
+            <div >
                 {user ? (
                     <>
-                        <span>Welcome, {user.email}</span>
-                        <button onClick={handleLogout}>Logout</button>
+
+                        <button onClick={handleLogout}>{user.email}</button>
                     </>
                 ) : (
                     <button onClick={handleLogin} className="google-login-button">

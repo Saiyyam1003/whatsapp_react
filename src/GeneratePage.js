@@ -46,6 +46,7 @@ function GeneratePage() {
     }
   };
 
+
   const handleBack = () => {
     navigate(`/`);
   };
@@ -79,7 +80,7 @@ function GeneratePage() {
       <div className="center-content">
         {isFileReady ? (
           <>
-            <button className='button' onClick={downloadExcel}>Download Excel File</button>
+            <button className='button' onClick={downloadExcel}>Download Excel File</button><br/>
             <button className='button' onClick={uploadFile}>Upload File</button>
           </>
         ) : (
