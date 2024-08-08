@@ -6,7 +6,8 @@
   align-items: center;
   justify-content: center;
   min-height: 91.4vh;
-  background-color: #282c34;
+  background-image: linear-gradient(to left, #434a54, #282c34); /* Gradient background */
+  background-size: 100% 100%;
   color: white;
   font-family: 'Arial', sans-serif;
 }
@@ -39,74 +40,66 @@
   height: auto;
 }
 
-.input-group {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
 
-.input-group label {
-  margin-bottom: 10px;
-  font-weight: bold;
-}
 
-.input-group input {
-  margin-left: 10px;
-  padding: 8px;
-  border: none;
-  border-radius: 4px;
-  background-color: #50575e;
-  color: white;
-}
-
-.button {
-  margin-top: 20px;
+.container-left .button {
+  margin: 0 auto;
   padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  border: 0;
   background-color: #10e842;
-  color: #282c34;
-  border: none;
-  border-radius: 4px;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 12px;
+  transition: all 0.5s ease;
+}
+
+.container-left .button:hover {
+  letter-spacing: 3px;
+  background-color: hsl(261deg 80% 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+}
+
+.container-left .button:active {
+  letter-spacing: 3px;
+  background-color: hsl(261deg 80% 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
+}
+
+.buttons {
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 10px 20px;
+  border-radius: 30px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  border: 0;
+  background-color: #10e842;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 12px;
+  transition: all 0.5s ease;
 }
 
-.button:hover {
-  background-color: #21a1f1;
+.buttons:hover {
+  letter-spacing: 3px;
+  background-color: hsl(261deg 80% 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
 }
 
-.generate-button {
-  margin-top: 20px;
-  padding: 10px 40px;
-  background-color: #61dafb;
-  color: #282c34;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.buttons:active {
+  letter-spacing: 3px;
+  background-color: hsl(261deg 80% 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
 }
 
-.generate-button:hover {
-  background-color: #21a1f1;
-}
-
-.date-time-inputs {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.date-time-inputs label {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.date-time-inputs input[type="date"],
-.date-time-inputs input[type="time"] {
-  margin-left: 10px;
-  padding: 8px;
-  border: none;
-  border-radius: 4px;
-  background-color: #50575e;
-  color: white;
-}

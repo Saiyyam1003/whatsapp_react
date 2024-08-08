@@ -56,7 +56,7 @@ function DatePage() {
                 <div className="date-time-inputs">
                     <h3>Please Enter the Required Time Frame</h3>
                     <label>
-                        Start Date:
+                        Start Date: 
                         <input type="date" value={startDate} onChange={(e) => setStartDate(e.target.value)} />
                     </label>
                     <label>
@@ -64,11 +64,11 @@ function DatePage() {
                         <input type="time" value={startTime} onChange={(e) => setStartTime(e.target.value)} />
                     </label>
                     <label>
-                        End Date:
+                        End Date  :   
                         <input type="date" value={endDate} onChange={(e) => setEndDate(e.target.value)} />
                     </label>
                     <label>
-                        End Time:
+                        End Time  :   
                         <input type="time" value={endTime} onChange={(e) => setEndTime(e.target.value)} />
                     </label>
                     <button onClick={handleConvertToUnix} className="button">Generate QR</button>

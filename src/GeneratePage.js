@@ -5,6 +5,7 @@ import './GeneratePage.css';
 function GeneratePage() {
   const { userEmail } = useParams();
   const [isFileReady, setIsFileReady] = useState(false);
+  const [isFileUploaded, setIsFileUploaded] = useState(false);
   const navigate = useNavigate();
 
   const downloadExcel = async () => {
@@ -38,6 +39,7 @@ function GeneratePage() {
       if (response.ok) {
         const data = await response.json();
         console.log('File uploaded successfully:', data);
+        alert('File uploaded successfully!');
       } else {
         console.error('Failed to upload file');
       }
@@ -82,6 +84,7 @@ function GeneratePage() {
           <>
             <button className='button' onClick={downloadExcel}>Download Excel File</button><br/>
             <button className='button' onClick={uploadFile}>Upload File</button>
+            
           </>
         ) : (
           <div>

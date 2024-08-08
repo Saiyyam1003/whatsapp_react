@@ -86,12 +86,12 @@ function Navbar() {
 
     return (
         <nav className="navbar">
-            <h1>WhatsApp-Archiver</h1>
+            <h1><a class="highlight" href="/">WhatsApp-Archiver</a></h1>
             <div >
                 {user ? (
                     <>
 
-                        <button onClick={handleLogout}>{user.email}</button>
+                        <button className="google-login-button" onClick={handleLogout}>{user.email}</button>
                     </>
                 ) : (
                     <button onClick={handleLogin} className="google-login-button">

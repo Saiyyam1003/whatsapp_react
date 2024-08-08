@@ -76,7 +76,7 @@ function HomePage() {
             <button onClick={changeDateTime} className='button'>Update Date and Time</button>
           </div>
         </div>
-        <button onClick={handleGenerate} className="button">Generate Excel Sheet</button>
+        <button onClick={handleGenerate} className="buttons">Generate Excel Sheet</button>
       </header>
     </div>
   );
